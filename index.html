@@ -613,7 +613,8 @@ const KVG_DATA = {"あ":["M31.01,33c0.88,0.88,2.75,1.82,5.25,1.75c8.62-0.25,20-2
   });
   ink.addEventListener('pointermove', (e) => {
     if (!live) return;
-    const events = e.getCoalescedEvents ? e.getCoalescedEvents() : [e];
+    const coalesced = e.getCoalescedEvents ? e.getCoalescedEvents() : [];
+    const events = coalesced.length ? coalesced : [e];
     for (const ev of events) {
       const p = pointFrom(ev);
       const prev = live[live.length - 1];

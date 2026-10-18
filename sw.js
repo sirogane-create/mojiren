@@ -1,6 +1,6 @@
 // Offline support: the app shell is precached, fonts and extra stroke data are cached on first use.
 // Bump VERSION whenever index.html changes so installed copies pick up the new version.
-const VERSION = 'mojiren-v1';
+const VERSION = 'mojiren-v2';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/apple-touch-icon.png', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
